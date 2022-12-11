@@ -1,0 +1,36 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1064" y1="1079.27" x2="1064" y2="-1" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1144" y1="1079.4" x2="1144" y2="-0.866699" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1224" y1="1079.53" x2="1224" y2="-0.733398" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1304" y1="1079.67" x2="1304" y2="-0.600098" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1384" y1="1079.8" x2="1384" y2="-0.466797" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1464" y1="1079.93" x2="1464" y2="-0.333496" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1544" y1="1080.07" x2="1544" y2="-0.200195" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1104" y1="1079.4" x2="1104" y2="-0.866699" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1184" y1="1079.53" x2="1184" y2="-0.733398" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1264" y1="1079.67" x2="1264" y2="-0.600098" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1344" y1="1079.8" x2="1344" y2="-0.466797" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1424" y1="1079.93" x2="1424" y2="-0.333496" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1504" y1="1080.07" x2="1504" y2="-0.200195" stroke="#FF5E14" stroke-width="14"/>
+<line x1="1584" y1="1080.2" x2="1584" y2="-0.0668945" stroke="#FF5E14" stroke-width="14"/>
+<line x1="774" y1="122" x2="1920" y2="122" stroke="#FF5E14" stroke-width="14"/>
+<line x1="774" y1="204" x2="1920" y2="204" stroke="#FF5E14" stroke-width="14"/>
+<line x1="774" y1="916" x2="1920" y2="916" stroke="#FF5E14" stroke-width="14"/>
+<line x1="774" y1="845" x2="1920" y2="845" stroke="#FF5E14" stroke-width="14"/>
+<g filter="url(#filter0_d_62_269)">
+<circle cx="175" cy="184" r="1086" fill="#131316"/>
+</g>
+<defs>
+<filter id="filter0_d_62_269" x="-961" y="-948" width="2272" height="2272" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="15" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_62_269"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="17.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_62_269"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_62_269" result="shape"/>
+</filter>
+</defs>
+</svg>
