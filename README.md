@@ -24,7 +24,7 @@ Build a frontend to display, create, edit update delete the posts -
 <img src="./assets/screenshots/Login.png">
 
 </div>
-<div class="display: flex">
+<div>
 <img src="./assets/screenshots/Dashboard1.png" width="fit-content">
 <img src="./assets/screenshots/Dashboard2.png" width="fit-content">
 
