@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import { NextPage } from "next";
 import { PostContext } from "../../utils/context/PostsContext";
 import { useRouter } from "next/router";
@@ -37,21 +37,26 @@ const EditPage: NextPage<EditPageProps> = () => {
 	const { user, isAuthenticated, setIsAuthenticated } = useContext(UserContext);
 
 	const handleUpdate = () => {
+		const BreakError = {};
 		try {
 			const content = ref.current.value;
-
-			console.log(content);
-			if (content.length === 0) {
-				alert("Textbox is empty!!!");
-				console.log("Empty String is being passed.");
+			if (!isAuthenticated) {
+				alert("Please Login to post on MindLine");
+				throw BreakError;
 			} else {
-				console.log(data.id);
-				const id = data.id!;
-				updatePost(id! as string, content);
+				if (content.length === 0) {
+					alert("Textbox is empty!!!");
+					console.log("Empty String is being passed.");
+				} else {
+					console.log(data.id);
+					const id = data.id!;
+					updatePost(id! as string, content);
+					alert("your text is changed");
+				}
 			}
-		} catch (error) {
+		} catch (err) {
+			if (err !== BreakError) throw err;
 		} finally {
-			alert("your text is changed");
 			router.push("/dashboard");
 		}
 		console.log("Hello");
