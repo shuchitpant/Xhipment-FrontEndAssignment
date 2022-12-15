@@ -1,28 +1,16 @@
-import { auth } from "../utils/firebase";
 import Image from "next/image";
 import Logo1 from "../assets/images/MindLine.svg";
-import bgCircle from "../assets/images/Ellipse 1.svg";
-// import BGmain from '../assets/images/backgroundwhole.svg'
 import Tagline from "../assets/images/tagline.svg";
-import LineArt from "../assets/images/lineart.svg";
 import Group12 from "../assets/images/Group12.png";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useContext, useEffect } from "react";
-// import Link from "next/link";
+import { useContext } from "react";
 import { useRouter } from "next/router";
 import { UserContext } from "../utils/context/UserContext";
-import { PostContext } from "../utils/context/PostsContext";
 
 export default function Home() {
-	// const context = useContext(UserContext);
-	// if(!context){
-	//     return null;
-	// }
 	const router = useRouter();
-	// const [user, setUser] = useAuthState(auth);
+
 	const { login, user } = useContext(UserContext);
-	// const { readPosts } = useContext(PostContext);
+
 	const handleLogin = () => {
 		login(router);
 	};
@@ -74,30 +62,8 @@ export default function Home() {
 					) : (
 						""
 					)}
-					{/* {user ? (
-						<button
-							onClick={() => auth.signOut()}
-							className="bg-primary-orange hover:bg-blue-700 text-white font-normal py-4 px-10  text-3xl rounded-2xl mt-5 "
-						>
-							Logout
-						</button>
-					) : (
-						""
-					)} */}
 				</div>
 			</div>
-
-			{/* <Image
-                src={BGmain}
-                className="absolute top-0 right-0 h-screen"
-                alt="Picture of the author"
-                /> */}
-
-			{/* <Image
-                src={bgCircle}
-                className="absolute top-0 left-0 h-screen"
-                alt="Picture of the author"
-                /> */}
 		</div>
 	);
 }

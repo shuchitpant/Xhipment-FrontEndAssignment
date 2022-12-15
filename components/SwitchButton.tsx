@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-
 interface SwitchButtonTypes {
 	setIsYou: (bool: boolean) => void;
 	isYou: boolean;
 	isAuthenticated: boolean;
 }
 
-// const SwitchButton = () => {
 const SwitchButton = ({
 	setIsYou,
 	isYou,

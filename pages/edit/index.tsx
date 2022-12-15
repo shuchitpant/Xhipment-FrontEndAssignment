@@ -1,14 +1,8 @@
 import React, { useContext, useRef } from "react";
-import type { ParsedUrlQuery } from "querystring";
-// import type { Locale } from './i18n'
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-// import { UserContext } from "../../utils/context/UserContext";
+import { NextPage } from "next";
 import { PostContext } from "../../utils/context/PostsContext";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Logo1 from "../assets/images/MindLine.svg";
-import Group12 from "../assets/images/Group12.png";
-import Tagline from "../assets/images/tagline.svg";
 import Header from "../../components/Header";
 import { UserContext } from "../../utils/context/UserContext";
 import { auth } from "../../utils/firebase";
@@ -21,9 +15,6 @@ interface Post {
 }
 
 interface PostType {
-	// username: string;
-	// text: string;
-	// id: string;
 	post: Post;
 }
 
@@ -44,14 +35,10 @@ const EditPage: NextPage<EditPageProps> = () => {
 	const router = useRouter();
 	const data = router.query;
 	const { user, isAuthenticated, setIsAuthenticated } = useContext(UserContext);
-	// let Postid = data.id;
 
 	const handleUpdate = () => {
 		try {
 			const content = ref.current.value;
-			// content = content.strip();
-
-			// idhar neeche wale part mein id pass karwado
 
 			console.log(content);
 			if (content.length === 0) {
@@ -64,7 +51,6 @@ const EditPage: NextPage<EditPageProps> = () => {
 			}
 		} catch (error) {
 		} finally {
-			// ref.current!.value = "";
 			alert("your text is changed");
 			router.push("/dashboard");
 		}
@@ -95,7 +81,6 @@ const EditPage: NextPage<EditPageProps> = () => {
 						placeholder=""
 						ref={ref}
 						id="message"
-						// value={text}
 						name="message"
 						rows={4}
 					>
@@ -103,7 +88,6 @@ const EditPage: NextPage<EditPageProps> = () => {
 					</textarea>
 					<button
 						type="button"
-						// onClick={handleSubmit}
 						className="h-[10vh] w-[13%] md:w-1/12 items-center bg-primary-purple rounded-lg flex justify-center hover:border border-primary-white ease-in duration-200 hover:scale-105"
 						onClick={handleUpdate}
 					>
@@ -116,35 +100,3 @@ const EditPage: NextPage<EditPageProps> = () => {
 };
 
 export default EditPage;
-
-// export const getStaticPaths: GetStaticPaths = async () => {
-// 	// const { posts } = useContext(PostContext);
-// 	let paths: { params: { id: string } }[] = [];
-
-// 	try {
-// 		paths = posts!.map((post) => ({
-// 			params: { id: post.id },
-// 		}));
-// 	} catch (err) {
-// 		console.error(err);
-// 	}
-
-// 	return { paths, fallback: false };
-// };
-
-// export const getStaticProps: GetStaticProps = async () => {
-// 	// const { posts } = useContext(PostContext);
-// 	let data: Post[] = [];
-// 	try {
-// 		posts!.map((post) => ({
-// 			data: post,
-// 		}));
-// 	} catch (err) {
-// 		console.error(err);
-// 	}
-// 	return {
-// 		props: {
-// 			data,
-// 		},
-// 	};
-// };

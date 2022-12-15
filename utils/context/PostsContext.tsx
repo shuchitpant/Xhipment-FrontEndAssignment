@@ -7,17 +7,8 @@ import {
 	query,
 	updateDoc,
 } from "firebase/firestore";
-
 import { v4 as uuidv4 } from "uuid";
-
-import { userInfo } from "os";
-import React, {
-	createContext,
-	useContext,
-	useEffect,
-	useMemo,
-	useState,
-} from "react";
+import React, { createContext, useContext, useMemo, useState } from "react";
 import { db } from "../firebase";
 import { UserContext } from "./UserContext";
 

@@ -1,6 +1,4 @@
-import { User } from "firebase/auth";
 import { NextPage } from "next";
-import { type } from "os";
 import React, { useContext, useEffect, useState } from "react";
 import { PostContext } from "../utils/context/PostsContext";
 import { UserContext } from "../utils/context/UserContext";

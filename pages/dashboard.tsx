@@ -1,17 +1,11 @@
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { collection, onSnapshot, query } from "firebase/firestore";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { isIfStatement } from "typescript";
-import usePost, { PostContext } from "../utils/context/PostsContext";
+import { useContext, useState } from "react";
+import { PostContext } from "../utils/context/PostsContext";
 import { UserContext } from "../utils/context/UserContext";
-import { auth, db } from "../utils/firebase";
+import { auth } from "../utils/firebase";
 import Image from "next/image";
-import Logo2 from "../assets/images/Logo_PostPage.svg";
 import Header from "../components/Header";
 import SwitchButton from "../components/SwitchButton";
-import TextInput from "../components/TextInput";
 import CardHolder from "../components/CardHolder";
 import sendButton from "../assets/images/Send.svg";
 import { useRef } from "react";
@@ -26,7 +20,6 @@ export default function DashBoard() {
 	const handleSubmit = () => {
 		try {
 			const content = ref.current.value;
-			// content = content.strip();
 
 			console.log(content);
 			if (content.length === 0) {
@@ -42,18 +35,8 @@ export default function DashBoard() {
 
 		console.log("after");
 	};
-	// console.log(posts);
+
 	const router = useRouter();
-	// if(localStorage.getItem('currUser') !== null){
-	//     router.push('/');
-	// }
-	// const user = localStorage.getItem('currUser');
-	// useEffect(() => {
-	// 	if (!isAuthenticated) {
-	// 		router.push("/");
-	// 	}
-	// }, []);
-	// return <pre>{JSON.stringify(posts, null, 2)}</pre>;
 
 	return (
 		<div className=" bg-primary-lessBlack w-screen h-screen overflow-hidden pb-8">
@@ -89,23 +72,6 @@ export default function DashBoard() {
 				</div>
 			</div>
 			{!isYou ? <CardHolder isYou={isYou} /> : <CardHolderYou isYou={isYou} />}
-			{/* <Image className="pt-5 ml-12" src={Logo2} alt="Picture of the author" />
-
-			{user ? (
-				<div className="text-2xl font-thin text-white pt-5">{user.email}</div>
-			) : (
-				""
-			)}
-			{user ? (
-				<button
-					onClick={() => auth.signOut()}
-					className="bg-primary-orange hover:bg-blue-700 text-white font-normal py-4 px-10  text-3xl rounded-2xl mt-5 "
-				>
-					Logout
-				</button>
-			) : (
-				""
-			)} */}
 		</div>
 	);
 }

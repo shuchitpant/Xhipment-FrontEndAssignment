@@ -4,27 +4,10 @@ import {
 	setPersistence,
 	inMemoryPersistence,
 	GoogleAuthProvider,
-	UserCredential,
 	User,
 } from "firebase/auth";
-import { getAuth } from "firebase/auth";
 import { auth } from "../firebase";
-import { NextRouter, useRouter } from "next/router";
-
-// export interface userContextInterface {
-//     displayName: string;
-//     email: string;
-// }
-
-// export const UserContext = createConte, xt<userContextInterface | null>(null);
-
-// export const UserProvider= ({ children: React.ReactNode }) => {
-//     const [currUser,setCurrUser] = useState(Object);
-
-//     return (
-//         <UserContext.Provider value={currUser}>{children}</UserContext.Provider>
-//     )
-// }
+import { NextRouter } from "next/router";
 
 interface UserContextType {
 	isAuthenticated: boolean;

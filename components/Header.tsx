@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Image from "next/image";
 import Logo2 from "../assets/images/Logo_PostPage.svg";
-import { userAgent } from "next/server";
 import { Auth, User } from "firebase/auth";
 import { NextPage } from "next";
 import { UserContext } from "../utils/context/UserContext";
@@ -10,7 +9,6 @@ import Logo1 from "../assets/images/MindLine.svg";
 import {
 	ArrowLeftOnRectangleIcon,
 	ArrowRightOnRectangleIcon,
-	BeakerIcon,
 } from "@heroicons/react/24/solid";
 
 interface Props {
