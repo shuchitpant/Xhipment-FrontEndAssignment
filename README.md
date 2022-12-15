@@ -18,6 +18,18 @@ Build a frontend to display, create, edit update delete the posts -
 - [Tailwind CSS](https://tailwindcss.com/) for the styling
 - [Firebase](https://firebase.google.com/) : [Firestore](https://firebase.google.com/docs/firestore) for the storage and [Google Oauth](https://firebase.google.com/docs/auth) for the authentication.
 
+## Design ✏️
+
+<div >
+<img src="./assets/screenshots/Login">
+
+</div>
+<div class="display: flex">
+<img src="./assets/screenshots/Dashboard1" width="400px">
+<img src="./assets/screenshots/Dashboard2" width="400px">
+
+</div>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
