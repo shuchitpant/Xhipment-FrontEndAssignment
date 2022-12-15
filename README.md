@@ -14,7 +14,7 @@ Build a frontend to display, create, edit update delete the posts -
 
 ## Techstack Used in the App 📖
 
-- [Next.js Documentation](https://nextjs.org/docs) in [Typescript](https://nextjs.org/docs/basic-features/typescript) for the frontend
+- [Next.js](https://nextjs.org/docs) in [Typescript](https://nextjs.org/docs/basic-features/typescript) for the frontend
 - [Tailwind CSS](https://tailwindcss.com/) for the styling
 - [Firebase](https://firebase.google.com/) : [Firestore](https://firebase.google.com/docs/firestore) for the storage and [Google Oauth](https://firebase.google.com/docs/auth) for the authentication.
 
