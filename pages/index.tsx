@@ -27,7 +27,7 @@ export default function Home() {
 		login(router);
 	};
 	const handleContinue = () => {
-		router.push("/lol");
+		router.push("/dashboard");
 	};
 	return (
 		<div
@@ -53,7 +53,7 @@ export default function Home() {
 					width={600}
 					alt="Picture of the author"
 				/>
-				<div className="pt-5">
+				<div className="pt-5 space-x-4">
 					<button
 						onClick={handleLogin}
 						className="bg-primary-orange hover:bg-blue-700 text-white font-normal py-2 px-8  lg:py-4 lg:px-12 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-2xl "
@@ -62,7 +62,7 @@ export default function Home() {
 					</button>
 
 					<button
-						className="bg-primary-white hover:bg-primary-orange hover:text-white text-black font-normal py-2 px-6 sm:text-xl md:text-2xl lg:lg:py-4 lg:px-8 w-50 text-3xl rounded-2xl ml-4"
+						className="bg-primary-white hover:bg-primary-orange hover:text-white text-black  font-normal py-2 px-8  lg:py-4 lg:px-12 text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-2xl "
 						onClick={handleContinue}
 					>
 						Continue

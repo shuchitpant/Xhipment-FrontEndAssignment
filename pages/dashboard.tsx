@@ -17,29 +17,11 @@ import sendButton from "../assets/images/Send.svg";
 import { useRef } from "react";
 import CardHolderYou from "../components/CardHolderYou";
 
-export default function lol() {
+export default function DashBoard() {
 	const ref = useRef<any>(null);
 	const { user, isAuthenticated, setIsAuthenticated } = useContext(UserContext);
 	const { createPost, posts } = useContext(PostContext);
 	const [isYou, setIsYou] = useState(false);
-	// const [posts, setPosts] = useState({});
-	// useEffect(() => {
-	// 	try {
-	// 		const q = query(collection(db, "posts"));
-	// 		const unsubscribe = onSnapshot(q, (querySnapshot) => {
-	// 			let postsArr: Array<any> = [];
-	// 			querySnapshot.forEach((doc) => {
-	// 				postsArr.push({ ...doc.data(), id: doc.id });
-	// 			});
-	// 			console.log("postsArr --- LAVDA SAALA");
-	// 			setPosts(postsArr);
-	// 		});
-	// 		console.log("object");
-	// 		return () => unsubscribe();
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// }, [posts]);
 
 	const handleSubmit = () => {
 		try {
@@ -100,7 +82,7 @@ export default function lol() {
 					<button
 						type="button"
 						onClick={handleSubmit}
-						className="h-[10vh] w-12 md:w-1/4 items-center bg-primary-darkGrey rounded-lg flex justify-center hover:border border-primary-orange ease-in duration-200 hover:scale-105"
+						className="h-[10vh] w-[13%] md:w-1/12 items-center bg-primary-darkGrey rounded-lg flex justify-center hover:border border-primary-orange ease-in duration-200 hover:scale-105"
 					>
 						<Image src={sendButton} alt={"Go"} className="h-1/2 w-1/2" />
 					</button>

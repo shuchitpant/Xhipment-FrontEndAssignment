@@ -59,7 +59,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 			setUser(result.user);
 			setIsAuthenticated(true);
 			console.log(result.user);
-			router.push("/lol");
+			router.push("/dashboard");
 		} catch (error) {
 			console.log("Error - Auth Failed", error);
 		}
