@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { PostContext } from "../utils/context/PostsContext";
 import Card from "./Card";
 
@@ -38,6 +38,7 @@ const CardHolder: NextPage<Props> = (props) => {
 						.reverse()
 						.map((post) => (
 							<Card
+								key={post.id}
 								username={post.username}
 								text={post.text}
 								isYou={isYou}
