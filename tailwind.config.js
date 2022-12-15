@@ -12,15 +12,12 @@ module.exports = {
         primary:{
           'white': '#ffffff',
           'orange':'#FF5E14',
-          'grey': '#25262B'
+          'grey': '#25262B', 
+          'lessBlack': '#131316',
+          'darkGrey':'#2F313A',
+          'purple' : '#B733CC',
+          'crimson': '#FF5A5A'
         },
-        'purple': '#3f3cbb',
-        'midnight': '#121063',
-        'metal': '#565584',
-        'tahiti': '#3ab7bf',
-        'silver': '#ecebff',
-        'bubble-gum': '#ff77e9',
-        'bermuda': '#78dcca',
       },
       fontFamily:{
         thickboi: ["Thickboi", "sans"],

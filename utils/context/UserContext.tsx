@@ -79,8 +79,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 	return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
 
-const useAuth = () => {
-	const context = useContext(UserContext);
-	return context;
-};
-export default useAuth;
+// const useAuth = () => {
+// 	const context = useContext(UserContext);
+// 	return context;
+// };
+// export default useAuth;
